@@ -3,7 +3,7 @@
 Plugin Name: Custom Post Type RSS feeds
 Plugin URI: http://jonathandavidharris.co.uk
 Description: A very simply plugin that add rss feeds for custom post types that have the archives set to true
-Version: 0.6
+Version: 0.7
 Revision Date: SEPT 19, 2011
 Requires at least: WP 3.2.1
 Tested up to: WP 3.2.1
