@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: spacedmonkey
-Tags: rss, custom_post_type
+Tags: rss, custom post types
 Requires at least: 3.2.1
 Tested up to: 3.2.1
 Stable tag: 1
