@@ -19,4 +19,4 @@ This is a simple plugin designed to make it super easy to add custom post types 
 
 == Screenshots ==
 
-1. screenshot-1.png 
+1. screenshot-1.png
