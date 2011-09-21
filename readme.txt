@@ -16,7 +16,3 @@ This is a simple plugin designed to make it super easy to add custom post types 
 1. Upload the entire `custom_post_type_rss` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-
-== Screenshots ==
-
-1. screenshot-1.png
