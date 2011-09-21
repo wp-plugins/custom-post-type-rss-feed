@@ -16,7 +16,7 @@ This is a simple plugin designed to make it super easy to add custom post types 
 
 == Screenshots ==
 
-Coming soon
+Coming soon..
 
 == Languages ==
 
