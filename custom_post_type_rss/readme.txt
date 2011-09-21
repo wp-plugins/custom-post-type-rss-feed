@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: spacedmonkey
 Tags: rss, custom_post_type
-Requires at least: 3.2
+Requires at least: 3.2.1
 Tested up to: 3.2.1
 Stable tag: 1
 
@@ -19,6 +19,7 @@ This is a simple plugin designed to make it super easy to add custom post types 
 Coming soon..
 
 == Languages ==
+
 
 Coming soon
 
