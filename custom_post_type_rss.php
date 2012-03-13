@@ -3,8 +3,8 @@
 Plugin Name: Custom Post Type RSS feeds
 Plugin URI: http://jonathandavidharris.co.uk
 Description: A very simply plugin that add rss feeds for custom post types that have the archives set to true
-Version: 0.7
-Revision Date: SEPT 19, 2011
+Version: 1
+Revision Date: MAR 13, 2012
 Requires at least: WP 3.2.1
 Tested up to: WP 3.2.1
 Author: Jonathan Harris
@@ -33,7 +33,7 @@ Site Wide Only: true
 
 define ( 'CPTRF_IS_INSTALLED', 1 );
 
-define ( 'CPTRF_VERSION', '0.1' );
+define ( 'CPTRF_VERSION', '1' );
 
 define ( 'CPTRF_DB_VERSION', '1' );
 
@@ -53,7 +53,10 @@ function cptrf_init(){
 
 	foreach(get_post_types($args) as $id => $vale){
 		$feed = get_post_type_archive_feed_link( $vale );
-		echo '<link rel="alternate" type="application/rss+xml" title="'.get_bloginfo("name").' &raquo; '.ucfirst($vale).' &raquo;  RSS Feed" 	href="'.$feed.'" />';
+		$obj = get_post_type_object($vale);
+		$name = $obj->labels->name;
+		$feedname = __('Feed');
+		echo '<link rel="alternate" type="application/rss+xml" title="'.get_bloginfo("name").' &raquo; '.$name.' '.$feedname .'" 	href="'.$feed.'" />';
 	}
 			
 }
