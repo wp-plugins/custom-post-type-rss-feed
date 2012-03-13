@@ -7,7 +7,7 @@ Tags: rss, custom post types, feed
 Author URI: http://jonthandavidharris.co.uk
 Author:  Jonathan Harris
 Requires at least: 3.2.1 
-Tested up to: 3.2.1
+Tested up to: 3.3.1
 Stable tag: 1.0
 
 This is a simple plugin designed to make it super easy to add custom post types RSS feed into a theme.
