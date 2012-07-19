@@ -1,20 +1,20 @@
 <?php
 /*
 Plugin Name: Custom Post Type RSS feeds
-Plugin URI: http://jonathandavidharris.co.uk
+Plugin URI: http://www.jonathandavidharris.co.uk/scripts/custom-post-type-rss-feeds/
 Description: A very simply plugin that add rss feeds for custom post types that have the archives set to true
-Version: 1.0
-Revision Date: MAR 13, 2012
+Version: 1.1
+Revision Date: JUL 19, 2012
 Requires at least: WP 3.2.1
-Tested up to: WP 3.2.1
+Tested up to: WP 3.4.1
 Author: Jonathan Harris
-Author URI: http://jonthandavidharris.co.uk
+Author URI: http://www.jonthandavidharris.co.uk/
 License: GNU General Public License 2.0 (GPL)
-Site Wide Only: true
+Network: true
 
 */
 
-/*  Copyright 2011  JONATHAN HARRIS  (email : JON@SPACEDMONKEY.CO.UK)
+/*  Copyright 2012  JONATHAN HARRIS  (email : JON@SPACEDMONKEY.CO.UK)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -31,11 +31,11 @@ Site Wide Only: true
 */
 
 
-define ( 'CPTRF_IS_INSTALLED', 1 );
+define ( 'CPTRF_IS_INSTALLED', '1.1' );
 
-define ( 'CPTRF_VERSION', '1' );
+define ( 'CPTRF_VERSION', '1.1' );
 
-define ( 'CPTRF_DB_VERSION', '1' );
+define ( 'CPTRF_DB_VERSION', '1.1' );
 
 
 function cptrf_activate() {
@@ -45,18 +45,25 @@ function cptrf_activate() {
 register_activation_hook( __FILE__, 'cptrf_activate' );
 
 function cptrf_init(){
+	$siteName = get_bloginfo("name");
+	
 	$args=array(
   		'public'   => true,
   		'has_archive' => true,
   		'_builtin' => false
 	); 
 
-	foreach(get_post_types($args) as $id => $vale){
+	$list_post_types = get_post_types($args);
+	$list_post_types = apply_filters('cptrf_list',$list_post_types);
+	
+	foreach($list_post_types as $id => $vale){
 		$feed = get_post_type_archive_feed_link( $vale );
 		$obj = get_post_type_object($vale);
 		$name = $obj->labels->name;
-		$feedname = __('Feed');
-		echo '<link rel="alternate" type="application/rss+xml" title="'.get_bloginfo("name").' &raquo; '.$name.' '.$feedname .'" 	href="'.$feed.'" />';
+		$feedtitle = __('Feed');
+		$feedname = $siteName." &raquo; ".$name. " ". $feedtitle; 
+		echo '<link rel="alternate" type="application/rss+xml" title="'.$feedname.'" href="'.$feed.'" />
+		';
 	}
 			
 }
