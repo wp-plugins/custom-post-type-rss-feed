@@ -1,14 +1,14 @@
-=== Plugin Name ===
+=== Custom Post Type RSS feed ===
 
 Contributors: spacedmonkey
-Plugin Name: Custom Post Type RSS Feed
+Plugin Name: Custom Post Type RSS feed
 Plugin URI: http://www.jonathandavidharris.co.uk/scripts/custom-post-type-rss-feeds/
 Tags: rss, post types, feed
 Author URI: http://jonthandavidharris.co.uk/
 Author:  Jonathan Harris
-Requires at least: 3.2, PHP5.2
-Tested up to: 3.4.1
-Stable tag: 1.1
+Requires at least: 3.6, PHP5.3
+Tested up to: 3.6
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,8 @@ This is a simple plugin designed to make it super easy to add custom post types 
 
 Read more about this plugin at it's [homepage](http://www.jonathandavidharris.co.uk/scripts/custom-post-type-rss-feeds/) .
 
+All check out the development version on github. <https://github.com/spacedmonkey/custom-post-type-rss-feed>
+
 == Installation ==
 
 1. Upload the entire `custom_post_type_rss` folder to the `/wp-content/plugins/` directory.
@@ -28,6 +30,10 @@ Read more about this plugin at it's [homepage](http://www.jonathandavidharris.co
 == Changelog ==
 
 The full changelog can be found [here](http://www.jonathandavidharris.co.uk/scripts/custom-post-type-rss-feeds/).
+
+= Version 2 =
+Completely rewritten plugin, with better layout of code. 
+Updated to added support for Wordpress 3.7
 
 = Version 1.1 =
 Updated to added support for Wordpress 3.4
@@ -41,4 +47,4 @@ Final release and bug fixs.
 
 == Upgrade Notice ==
 
-The current version of Custom Post Type RSS Feed requires WordPress 3.1 or higher. If you use older version of WordPress, you need to upgrade WordPress first.
+The current version of Custom Post Type RSS feed requires WordPress 3.6 or higher. If you use older version of WordPress, you need to upgrade WordPress first.
